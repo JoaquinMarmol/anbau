@@ -40,19 +40,10 @@ export default function App() {
               <div className="relative">
                 <div className="absolute -inset-1 bg-stone-900/20 blur-sm rounded-full" />
                 <div className="relative bg-stone-900 p-3 rounded-full">
-                  <svg 
-                    viewBox="0 0 24 24" 
-                    className="w-8 h-8 text-stone-50 fill-current"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path d="M12 2L14.5 9H22L16 14L18.5 21L12 17L5.5 21L8 14L2 9H9.5L12 2Z" />
-                    <path d="M12 22C12 22 19 18 19 12C19 6 12 2 12 2C12 2 5 6 5 12C5 18 12 22 12 22Z" opacity="0.5" />
-                  </svg>
+                  <img src="./anbau.png" alt="" className="h-10"/>
                 </div>
               </div>
-              <span className="text-5xl font-bold tracking-tighter text-stone-900 serif">AnBau</span>
             </div>
-            <span className="text-[10px] uppercase tracking-[0.3em] font-semibold text-stone-500 ml-12">Cultivando Innovación</span>
           </motion.div>
 
           {/* Maintenance Message */}
