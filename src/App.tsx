@@ -40,7 +40,7 @@ export default function App() {
               <div className="relative">
                 <div className="absolute -inset-1 bg-stone-900/20 blur-sm rounded-full" />
                 <div className="relative bg-stone-900 p-3 rounded-full">
-                  <img src="./anbau.png" alt="" className="h-10"/>
+                  <img src="/anbau.png" alt="" className="h-10"/>
                 </div>
               </div>
             </div>
