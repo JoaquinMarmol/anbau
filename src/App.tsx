@@ -4,7 +4,6 @@
  */
 
 import { motion } from "motion/react";
-import { Play } from "lucide-react";
 
 export default function App() {
   return (
@@ -65,21 +64,17 @@ export default function App() {
           </p>
 
           {/* Institutional Video Space */}
-          <div className="w-full aspect-video bg-stone-200 rounded-2xl overflow-hidden shadow-inner relative group cursor-pointer border border-stone-300">
-            <img 
-              src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?q=80&w=1200&auto=format&fit=crop" 
-              alt="Campo institucional"
-              className="w-full h-full object-cover opacity-80 group-hover:scale-105 transition-transform duration-700"
-              referrerPolicy="no-referrer"
+          <div className="w-full aspect-video rounded-2xl overflow-hidden shadow-lg border border-stone-300">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube.com/embed/yjvyI6dAtjk?si=qES7nmFvbPPJyFt6"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              referrerPolicy="strict-origin-when-cross-origin"
+              allowFullScreen
             />
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-16 h-16 bg-stone-900/80 rounded-full flex items-center justify-center backdrop-blur-sm group-hover:scale-110 transition-transform">
-                <Play className="text-stone-50 fill-stone-50 w-6 h-6 ml-1" />
-              </div>
-            </div>
-            <div className="absolute bottom-4 left-4 bg-stone-900/60 backdrop-blur-md px-4 py-2 rounded-full border border-white/10">
-              <span className="text-stone-50 text-xs uppercase tracking-widest font-medium">Video Institucional</span>
-            </div>
           </div>
 
         </div>
