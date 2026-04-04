@@ -38,7 +38,7 @@ export default function App() {
           >
             <div className="flex items-center space-x-3 mb-1">
               <div className="relative">
-                <div className="absolute -inset-1 bg-stone-900/20 blur-sm rounded-full" />
+                <div className="absolute -inset-1 blur-sm rounded-full" />
                 <div className="relative bg-stone-900 p-3 rounded-full">
                   <img src="/anbau.png" alt="" className="h-10"/>
                 </div>
@@ -74,7 +74,7 @@ export default function App() {
       {/* Footer Decoration */}
       <div className="mt-8 relative z-10">
         <p className="text-stone-200/60 text-sm tracking-widest uppercase font-light">
-          &copy; 2026. AnBau &bull; Cultivando Innovación
+          &copy; 2026 AnBau &bull; Cultivando Innovación
         </p>
       </div>
     </div>
