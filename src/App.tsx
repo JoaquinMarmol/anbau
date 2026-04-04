@@ -39,17 +39,14 @@ export default function App() {
             <div className="flex items-center space-x-3 mb-1">
               <div className="relative">
                 <div className="absolute -inset-1 blur-sm rounded-full" />
-                <div className="relative bg-stone-900 p-3 rounded-full">
-                  <img src="/anbau.png" alt="" className="h-10"/>
+                <div className="relative p-3 rounded-full">
+                  <img src="/anbau.png" alt="" className="h-14"/>
                 </div>
               </div>
             </div>
           </motion.div>
 
           {/* Maintenance Message */}
-          <h1 className="serif text-4xl md:text-6xl font-medium text-stone-900 mb-4 tracking-tight">
-            Cultivando Innovación
-          </h1>
           <p className="text-stone-600 text-lg md:text-xl max-w-2xl mb-10 font-light leading-relaxed">
             Nuestra plataforma se encuentra en mantenimiento. Estamos preparando nuevas herramientas para potenciar tu producción.
           </p>
