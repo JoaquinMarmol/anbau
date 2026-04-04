@@ -74,7 +74,7 @@ export default function App() {
       {/* Footer Decoration */}
       <div className="mt-8 relative z-10">
         <p className="text-stone-200/60 text-sm tracking-widest uppercase font-light">
-          &copy; 2026 AnBau &bull; Cultivando Innovación
+          &copy; 2026. AnBau &bull; Cultivando Innovación
         </p>
       </div>
     </div>
