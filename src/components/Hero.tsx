@@ -26,44 +26,12 @@ export default function Hero() {
       </div>
 
       {/* AnBau plant logomark with sparkle on top — right side */}
-      <motion.svg
-        initial={{ opacity: 0, scale: 0.85, y: 20 }}
-        animate={{ opacity: 1, scale: 1, y: 0 }}
-        transition={{ duration: 1.2, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-        viewBox="0 0 320 420"
-        className="hidden md:block absolute right-[6%] lg:right-[12%] top-1/2 -translate-y-1/2 w-[280px] lg:w-[360px] text-white drop-shadow-[0_18px_40px_rgba(0,0,0,0.35)]"
-        aria-hidden
-      >
-        <g fill="currentColor">
-          {/* 4-point sparkle on top */}
-          <path d="M160 0 L170 56 L226 66 L170 76 L160 132 L150 76 L94 66 L150 56 Z" />
-
-          {/* Three tear-drop leaves originating from bottom anchor (160, 320) */}
-          {/* Center leaf — vertical */}
-          <ellipse cx="160" cy="240" rx="32" ry="90" />
-
-          {/* Left leaf — rotated */}
-          <ellipse
-            cx="160"
-            cy="240"
-            rx="32"
-            ry="90"
-            transform="rotate(-38 160 320)"
-          />
-
-          {/* Right leaf — rotated */}
-          <ellipse
-            cx="160"
-            cy="240"
-            rx="32"
-            ry="90"
-            transform="rotate(38 160 320)"
-          />
-
-          {/* Stem */}
-          <rect x="152" y="320" width="16" height="98" rx="4" />
-        </g>
-      </motion.svg>
+      <img
+        src="/isotipoblanco.png"
+        alt=""
+        aria-hidden="true"
+        className="pointer-events-none select-none absolute right-6 lg:right-16 top-1/2 -translate-y-1/2 z-[5] w-[260px] md:w-[340px] lg:w-[420px] opacity-90 drop-shadow-[0_30px_60px_rgba(0,0,0,0.35)]"
+      />
 
       {/* Content */}
       <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-12 pt-40 md:pt-48 pb-28">

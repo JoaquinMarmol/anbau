@@ -74,7 +74,11 @@ export default function QuienesSomos() {
                 {active === t.key && (
                   <motion.span
                     layoutId="quienes-tab-pill"
-                    className="absolute inset-0 rounded-full bg-brand-500"
+                    className="absolute inset-0 rounded-full"
+                    style={{
+                      background:
+                        "linear-gradient(90deg, #ABDD8A 0%, #23956A 100%)",
+                    }}
                     transition={{ type: "spring", bounce: 0.25, duration: 0.5 }}
                   />
                 )}
