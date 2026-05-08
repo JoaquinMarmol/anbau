@@ -27,7 +27,7 @@ export const ricePlantSunset = u("1500382017468-9049fed747ef", 1600); // wheat a
 export const cropHibridos = u("1574943320219-553eb213f72d", 1200); // hand with seeds / wheat
 export const cropHerbicidas = u("1605000797499-95a51c5269ae", 1200); // tractor in field
 export const cropFungicidas = u("1530836369250-ef72a3f5cda8", 1200); // green sprouts / leaves
-export const cropInsecticidas = u("1597857135948-d35cc63a09ca", 1200); // corn leaves close-up
+export const cropInsecticidas = u("1500382017468-9049fed747ef", 1200); // wheat field — fallback for insecticidas card
 export const cropTerapicos = u("1574943320219-553eb213f72d", 1200); // golden wheat
 export const cropCoadyuvante = u("1464454709131-ffd692591ee5", 1200); // berries / vineyard
 

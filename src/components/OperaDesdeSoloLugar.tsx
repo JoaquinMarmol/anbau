@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { fadeInUp, scaleIn, staggerContainer, viewportOnce } from "../lib/motion";
 import { ricePlantSunset } from "../lib/images";
+import { whatsappLink } from "../lib/contact";
 
 const stats = [
   { value: "2026", label: "Año de fundación", sub: "Innovando desde el primer día" },
@@ -28,7 +29,9 @@ export default function OperaDesdeSoloLugar() {
               <motion.a
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                href="#contacto"
+                href={whatsappLink("Hola AnBau, quiero unirme a la red de productores.")}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-pill-primary"
               >
                 UNITE
@@ -36,7 +39,9 @@ export default function OperaDesdeSoloLugar() {
               <motion.a
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
-                href="#contacto"
+                href={whatsappLink()}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="btn-pill-ghost"
               >
                 CONTACTANOS

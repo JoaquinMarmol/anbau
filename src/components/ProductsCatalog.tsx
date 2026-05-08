@@ -14,6 +14,7 @@ import {
 import { categorias, productos, type Categoria, type Producto } from "../data/products";
 import { fadeInUp, staggerContainer, viewportOnce } from "../lib/motion";
 import SparkleIcon from "./icons/SparkleIcon";
+import { whatsappLink } from "../lib/contact";
 import {
   cropHibridos,
   cropHerbicidas,
@@ -433,7 +434,9 @@ export default function ProductsCatalog() {
           <motion.a
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
-            href="#contacto"
+            href={whatsappLink("Hola AnBau, quería consultar con un asesor.")}
+            target="_blank"
+            rel="noopener noreferrer"
             className="btn-pill-primary uppercase tracking-wider shrink-0"
           >
             Consultá con un asesor

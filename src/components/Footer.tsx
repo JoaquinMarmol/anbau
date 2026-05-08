@@ -1,6 +1,7 @@
 import { motion } from "motion/react";
 import { fadeInUp, staggerContainer, viewportOnce } from "../lib/motion";
 import { bgCornField } from "../lib/images";
+import { whatsappLink } from "../lib/contact";
 
 const empresaLinks = ["Nosotros", "Equipo", "Novedades", "Carrera"];
 const contactoItems = [
@@ -55,7 +56,9 @@ export default function Footer() {
             <motion.a
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
-              href="#contacto"
+              href={whatsappLink("Hola AnBau, quería hablar con un experto.")}
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-pill-primary"
             >
               HABLÁ CON UN EXPERTO
