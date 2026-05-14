@@ -87,8 +87,8 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Subtle bottom fade into next section */}
-      <div className="pointer-events-none absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-b from-transparent to-[color:var(--color-surface-200)]" />
+      {/* Green divider strip at the bottom (Figma "Banner Soporte Divisora") */}
+      <div className="absolute bottom-0 left-0 right-0 h-3 bg-gradient-to-r from-brand-700 via-brand-400 to-brand-200" />
     </section>
   );
 }

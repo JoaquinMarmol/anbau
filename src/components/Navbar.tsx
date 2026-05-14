@@ -99,8 +99,8 @@ export default function Navbar() {
             />
           </a>
 
-          {/* Desktop links */}
-          <ul className="hidden md:flex items-center gap-7 lg:gap-9 ml-4 flex-1 justify-center">
+          {/* Desktop links — right-aligned */}
+          <ul className="hidden md:flex items-center gap-7 lg:gap-9 ml-auto">
             {links.map((l) => (
               <li key={l.label}>
                 <a
@@ -126,7 +126,7 @@ export default function Navbar() {
             rel="noopener noreferrer"
             whileHover={{ scale: 1.1, rotate: 25 }}
             whileTap={{ scale: 0.95 }}
-            className={`hidden md:flex ml-auto md:ml-0 items-center justify-center size-9 rounded-full shrink-0 transition-colors ${
+            className={`hidden md:flex items-center justify-center size-9 rounded-full shrink-0 transition-colors ${
               isDark ? "text-brand-200" : "text-brand-500"
             }`}
             aria-label="Contactanos por WhatsApp"
