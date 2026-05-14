@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { motion } from "motion/react";
 import { fadeInUp, scaleIn, staggerContainer, viewportOnce } from "../lib/motion";
-import { videoInstitucional } from "../lib/images";
 
 const tabs = [
   {
@@ -105,26 +104,20 @@ export default function QuienesSomos() {
           </motion.div>
         </div>
 
-        {/* Right: video / image card */}
+        {/* Right: institutional YouTube video */}
         <motion.div
           variants={scaleIn}
-          className="relative aspect-[4/3] md:aspect-[16/10] rounded-3xl overflow-hidden shadow-[0_30px_60px_-20px_rgba(7,13,33,0.35)] border border-white/60"
+          className="relative aspect-[16/10] rounded-3xl overflow-hidden shadow-[0_30px_60px_-20px_rgba(7,13,33,0.35)] border border-white/60 bg-black"
         >
-          <img
-            src={videoInstitucional}
-            alt="Campo al atardecer"
-            className="size-full object-cover"
+          <iframe
+            src="https://www.youtube.com/embed/yjvyI6dAtjk?si=qES7nmFvbPPJyFt6"
+            title="AnBau — Video institucional"
+            className="absolute inset-0 size-full"
+            frameBorder={0}
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerPolicy="strict-origin-when-cross-origin"
+            allowFullScreen
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-brand-950/50 to-transparent" />
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={viewportOnce}
-            transition={{ delay: 0.3 }}
-            className="absolute bottom-6 left-6 flex items-center gap-3 bg-white/95 backdrop-blur-sm rounded-full px-4 py-2 shadow-lg"
-          >
-            <img src="/anbau.png" alt="AnBau" className="h-7 w-auto" />
-          </motion.div>
         </motion.div>
       </motion.div>
     </section>
