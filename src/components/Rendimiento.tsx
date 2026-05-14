@@ -40,7 +40,7 @@ export default function Rendimiento() {
           alt=""
           className="size-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-brand-900/55 via-brand-800/35 to-brand-900/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-900/25 via-transparent to-brand-900/40" />
       </div>
 
       <motion.div

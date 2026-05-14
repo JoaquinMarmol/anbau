@@ -23,9 +23,9 @@ export default function Footer() {
           <img
             src={bgFooter}
             alt=""
-            className="size-full object-cover opacity-40"
+            className="size-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-ink-900/80 via-ink-900/88 to-ink-900" />
+          <div className="absolute inset-0 bg-gradient-to-b from-ink-900/40 via-ink-900/55 to-ink-900" />
         </div>
 
         <motion.div

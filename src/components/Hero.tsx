@@ -13,9 +13,9 @@ export default function Hero() {
         <img
           src={bgHomeFarm}
           alt=""
-          className="size-full object-cover opacity-25"
+          className="size-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-900 via-brand-800/90 to-brand-950/95" />
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-800/75 via-brand-700/55 to-brand-900/85 mix-blend-multiply" />
         <div
           className="absolute inset-0 opacity-30 mix-blend-overlay"
           style={{
