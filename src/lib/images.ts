@@ -15,9 +15,13 @@
 const u = (id: string, w = 1800, q = 80) =>
   `https://images.unsplash.com/photo-${id}?q=${q}&w=${w}&auto=format&fit=crop`;
 
-// Hero / dark section backgrounds — green corn leaves close-up texture
-export const bgHomeFarm = u("1574323347407-f5e1ad6d020b", 2400); // green corn leaves close-up
-export const bgCornField = u("1574323347407-f5e1ad6d020b", 2400); // same texture for Rendimiento + Footer
+// Hero / dark section backgrounds — local files from /public
+export const bgHomeFarm = "/hero.png";          // Hero (grayscale corn leaves)
+export const bgRendimiento = "/Rendimiento.png"; // Rendimiento (green tinted leaves)
+export const bgFooter = "/footer.png";           // Footer CTA (corn path)
+
+// Kept for backwards compatibility; alias to footer art
+export const bgCornField = bgFooter;
 
 // Section imagery
 export const videoInstitucional = u("1500382017468-9049fed747ef", 1600); // wheat field at golden hour — Quienes Somos

@@ -1,6 +1,6 @@
 import { motion } from "motion/react";
 import { fadeInUp, staggerContainer, viewportOnce } from "../lib/motion";
-import { bgCornField } from "../lib/images";
+import { bgFooter } from "../lib/images";
 import { whatsappLink } from "../lib/contact";
 
 const empresaLinks = ["Nosotros", "Equipo", "Novedades", "Carrera"];
@@ -21,11 +21,11 @@ export default function Footer() {
       <div className="relative overflow-hidden">
         <div className="absolute inset-0">
           <img
-            src={bgCornField}
+            src={bgFooter}
             alt=""
-            className="size-full object-cover opacity-30"
+            className="size-full object-cover opacity-40"
           />
-          <div className="absolute inset-0 bg-gradient-to-b from-ink-900/85 via-ink-900/90 to-ink-900" />
+          <div className="absolute inset-0 bg-gradient-to-b from-ink-900/80 via-ink-900/88 to-ink-900" />
         </div>
 
         <motion.div

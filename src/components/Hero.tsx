@@ -25,22 +25,26 @@ export default function Hero() {
         />
       </div>
 
-      {/* AnBau plant logomark with sparkle on top — right side */}
+      {/* AnBau plant logomark with sparkle on top —
+          desktop: middle-right · mobile: bottom-right */}
       <img
         src="/isotipoblanco.png"
         alt=""
         aria-hidden="true"
-        className="pointer-events-none select-none absolute right-6 lg:right-16 top-1/2 -translate-y-1/2 z-[5] w-[260px] md:w-[340px] lg:w-[420px] opacity-90 drop-shadow-[0_30px_60px_rgba(0,0,0,0.35)]"
+        className="pointer-events-none select-none absolute z-[5] opacity-90 drop-shadow-[0_30px_60px_rgba(0,0,0,0.35)]
+                   bottom-10 right-6 w-[150px]
+                   md:bottom-auto md:top-1/2 md:-translate-y-1/2 md:right-16 md:w-[340px]
+                   lg:w-[420px]"
       />
 
       {/* Content */}
-      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-12 pt-40 md:pt-48 pb-28">
+      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-12 pt-32 md:pt-48 pb-52 md:pb-28">
         <div className="max-w-3xl">
           <motion.h1
             initial={{ opacity: 0, y: 28 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.2, ease: [0.22, 1, 0.36, 1] }}
-            className="font-semibold text-white text-[clamp(2.5rem,6.5vw,6rem)] leading-[1.02] tracking-tight"
+            className="font-semibold text-white text-[clamp(2.25rem,6.5vw,6rem)] leading-[1.02] tracking-tight"
           >
             Cultivamos<br />
             decisiones que<br />
@@ -51,7 +55,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.45 }}
-            className="mt-8 max-w-xl text-white/85 text-lg font-light leading-relaxed"
+            className="mt-6 md:mt-8 max-w-xl text-white/85 text-base md:text-lg font-light leading-relaxed"
           >
             Acompañamos al productor con soluciones agrícolas, asesoramiento
             técnico y tecnología aplicada en cada etapa del proceso productivo.
@@ -61,13 +65,13 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-            className="mt-10 flex flex-wrap items-center gap-4"
+            className="mt-8 md:mt-10 flex flex-col sm:flex-row items-start sm:items-center gap-3 sm:gap-4"
           >
             <motion.a
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               href="#quienes-somos"
-              className="btn-pill-primary"
+              className="btn-pill-primary w-[180px] sm:w-auto justify-center"
             >
               CONOCENOS
             </motion.a>
@@ -75,7 +79,7 @@ export default function Hero() {
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               href="#productos"
-              className="btn-pill border border-brand-300/60 text-white bg-white/5 hover:bg-white/10"
+              className="btn-pill-primary w-[180px] sm:w-auto justify-center"
             >
               PRODUCTOS
             </motion.a>

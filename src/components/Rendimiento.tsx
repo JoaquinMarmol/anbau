@@ -1,7 +1,7 @@
 import { motion } from "motion/react";
 import { FlaskConical, TrendingUp, ShieldCheck, BarChart3 } from "lucide-react";
 import { fadeInUp, staggerContainer, viewportOnce } from "../lib/motion";
-import { bgCornField } from "../lib/images";
+import { bgRendimiento } from "../lib/images";
 
 const features = [
   {
@@ -33,14 +33,14 @@ export default function Rendimiento() {
       data-nav-theme="dark"
       className="relative bg-[color:var(--color-brand-800)] py-28 md:py-40 overflow-hidden"
     >
-      {/* Background layers */}
+      {/* Background layers — Rendimiento.png already carries the green tint */}
       <div className="absolute inset-0">
         <img
-          src={bgCornField}
+          src={bgRendimiento}
           alt=""
-          className="size-full object-cover opacity-20 mix-blend-multiply"
+          className="size-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-brand-900/70 via-brand-800/80 to-brand-900/95" />
+        <div className="absolute inset-0 bg-gradient-to-b from-brand-900/55 via-brand-800/35 to-brand-900/70" />
       </div>
 
       <motion.div
