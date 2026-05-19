@@ -35,8 +35,7 @@ export const cropInsecticidas = u("1500382017468-9049fed747ef", 1200); // wheat 
 export const cropTerapicos = u("1574943320219-553eb213f72d", 1200); // golden wheat
 export const cropCoadyuvante = u("1464454709131-ffd692591ee5", 1200); // berries / vineyard
 
-// Novedades
-export const newsTech = u("1464226184884-fa280b87c399", 1200); // satellite mapping / aerial fields
-export const newsFormacion = u("1574943320219-553eb213f72d", 1200); // wheat (formation context)
-export const newsResultados = u("1605000797499-95a51c5269ae", 1200); // grain pouring / harvest
-export const newsInvestigacion = u("1530836369250-ef72a3f5cda8", 1200); // sprout in soil
+// Novedades — fotos institucionales provistas (en public/)
+export const newsGarantiaCripton = "/new1.png"; // Garantía Cripton Xpro
+export const newsCampanaFina = "/new2.png"; // Lanzamiento Campaña Fina 2026
+export const newsCapacitacionBayer = "/new3.png"; // Capacitación Técnica Bayer
