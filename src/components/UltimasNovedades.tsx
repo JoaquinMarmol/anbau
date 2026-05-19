@@ -1,32 +1,71 @@
+import { useRef, useState } from "react";
 import { motion } from "motion/react";
 import { fadeInUp, staggerContainer, viewportOnce } from "../lib/motion";
-import { newsTech, newsFormacion, newsResultados, newsInvestigacion } from "../lib/images";
+import {
+  newsGarantiaCripton,
+  newsCampanaFina,
+  newsCapacitacionBayer,
+} from "../lib/images";
 import SparkleIcon from "./icons/SparkleIcon";
 
-const news = [
+type NewsItem = {
+  title: string;
+  body: string;
+  img: string;
+  link?: string;
+};
+
+const news: NewsItem[] = [
   {
-    title: "Nueva tecnología de mapeo satelital para agricultura de precisión",
-    body: "Implementamos sistemas de monitoreo en tiempo real que transforman la gestión del campo.",
-    img: newsTech,
+    title: "La garantía que respalda tu rendimiento",
+    body: "Con Garantía Cripton Xpro, tu inversión en protección de maíz está asegurada. Aplicando Cripton Xpro + Optimizer sumás tecnología comprobada para potenciar el rendimiento frente a enfermedades, y la tranquilidad de contar con un programa que respalda cada decisión en tu campo.",
+    img: newsGarantiaCripton,
+    link: "https://www.agro.bayer.com.ar/garantia-cripton-xpro",
   },
   {
-    title: "Workshops sobre manejo integrado de plagas",
-    body: "Formación práctica para productores sobre las mejores prácticas del sector.",
-    img: newsFormacion,
+    title: "Lanzamiento Campaña Fina 2026",
+    body: "En Anbau te acompañamos con condiciones excepcionales de financiación para que la Campaña Fina 2026 sea tu mejor inversión.",
+    img: newsCampanaFina,
   },
   {
-    title: "Récord de rendimiento en campaña 2025/26",
-    body: "Los productores que utilizaron nuestra plataforma superaron las expectativas proyectadas.",
-    img: newsResultados,
-  },
-  {
-    title: "Nuevas variedades adaptadas al cambio climático",
-    body: "Genética de última generación diseñada para maximizar estabilidad y performance.",
-    img: newsInvestigacion,
+    title: "Capacitación Técnica Bayer",
+    body: "Seguimos capacitándonos para brindarte lo mejor. Participamos de una Capacitación Técnica Bayer en La Aurora, Tres Arroyos, junto a colegas de la zona, profundizando en las últimas novedades y soluciones para el campo.",
+    img: newsCapacitacionBayer,
   },
 ];
 
 export default function UltimasNovedades() {
+  const trackRef = useRef<HTMLDivElement>(null);
+  const [active, setActive] = useState(0);
+
+  const handleScroll = () => {
+    const track = trackRef.current;
+    if (!track) return;
+    const trackLeft = track.getBoundingClientRect().left;
+    let nearest = 0;
+    let nearestDistance = Infinity;
+    Array.from(track.children).forEach((card, i) => {
+      const distance = Math.abs(card.getBoundingClientRect().left - trackLeft);
+      if (distance < nearestDistance) {
+        nearestDistance = distance;
+        nearest = i;
+      }
+    });
+    setActive(nearest);
+  };
+
+  const goToSlide = (i: number) => {
+    const track = trackRef.current;
+    if (!track) return;
+    const card = track.children[i] as HTMLElement | undefined;
+    if (!card) return;
+    const left =
+      card.getBoundingClientRect().left -
+      track.getBoundingClientRect().left +
+      track.scrollLeft;
+    track.scrollTo({ left, behavior: "smooth" });
+  };
+
   return (
     <section
       id="novedades"
@@ -66,16 +105,19 @@ export default function UltimasNovedades() {
           </motion.a>
         </div>
 
+        {/* Grilla en escritorio · carrusel deslizable en celular */}
         <motion.div
+          ref={trackRef}
+          onScroll={handleScroll}
           variants={staggerContainer}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="flex sm:grid sm:grid-cols-2 lg:grid-cols-3 gap-6 overflow-x-auto sm:overflow-x-visible overflow-y-hidden sm:overflow-y-visible snap-x snap-mandatory sm:snap-none [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
         >
           {news.map((n) => (
             <motion.article
               key={n.title}
               variants={fadeInUp}
               whileHover={{ y: -4 }}
-              className="group"
+              className="group w-[85%] shrink-0 snap-start sm:w-auto"
             >
               <div className="relative aspect-[4/5] rounded-3xl overflow-hidden shadow-[0_20px_40px_-20px_rgba(7,13,33,0.25)]">
                 <motion.img
@@ -97,9 +139,37 @@ export default function UltimasNovedades() {
               <p className="mt-2 text-ink-900/65 font-light text-[15px] leading-relaxed">
                 {n.body}
               </p>
+
+              {n.link && (
+                <motion.a
+                  href={n.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  whileHover={{ x: 4 }}
+                  className="mt-3 inline-block text-brand-600 font-medium tracking-wider text-sm"
+                >
+                  CONOCÉ MÁS →
+                </motion.a>
+              )}
             </motion.article>
           ))}
         </motion.div>
+
+        {/* Indicadores del carrusel — solo en celular */}
+        <div className="mt-8 flex justify-center gap-2.5 sm:hidden">
+          {news.map((n, i) => (
+            <button
+              key={n.title}
+              type="button"
+              onClick={() => goToSlide(i)}
+              aria-label={`Ver novedad ${i + 1}`}
+              aria-current={i === active}
+              className={`size-2.5 rounded-full transition-colors duration-300 ${
+                i === active ? "bg-brand-600" : "bg-ink-900/20"
+              }`}
+            />
+          ))}
+        </div>
       </motion.div>
     </section>
   );

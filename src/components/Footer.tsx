@@ -6,7 +6,7 @@ import { whatsappLink } from "../lib/contact";
 const empresaLinks = ["Nosotros", "Equipo", "Novedades", "Carrera"];
 const contactoItems = [
   "anbausudeste@gmail.com",
-  "2262",
+  "+54 9 2477 53-4588",
   "Nechochea, Buenos Aires – Argentina",
 ];
 
