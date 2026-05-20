@@ -5,22 +5,22 @@ export default function Hero() {
   return (
     <section
       id="home"
-      data-nav-theme="dark"
+      data-nav-theme="light"
       className="relative min-h-[100svh] overflow-hidden bg-[color:var(--color-brand-900)]"
     >
-      {/* Background image with gradient + overlay */}
+      {/* Background image with green gradient + soft highlight (photo stays visible) */}
       <div className="absolute inset-0">
         <img
           src={bgHomeFarm}
           alt=""
           className="size-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-brand-800/75 via-brand-700/55 to-brand-900/85 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-br from-brand-800/55 via-brand-500/55 to-brand-900/75" />
         <div
-          className="absolute inset-0 opacity-30 mix-blend-overlay"
+          className="absolute inset-0"
           style={{
-            backgroundImage:
-              "radial-gradient(ellipse at 30% 20%, rgba(255,255,255,0.15), transparent 60%)",
+            background:
+              "radial-gradient(ellipse 70% 100% at 65% 45%, rgba(63,160,85,0.25) 0%, transparent 65%)",
           }}
         />
       </div>

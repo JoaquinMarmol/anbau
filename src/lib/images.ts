@@ -27,13 +27,13 @@ export const bgCornField = bgFooter;
 export const videoInstitucional = u("1500382017468-9049fed747ef", 1600); // wheat field at golden hour — Quienes Somos
 export const ricePlantSunset = u("1500382017468-9049fed747ef", 1600); // wheat at sunset — Operá
 
-// Productos category cards (6) — each tries to evoke its category
-export const cropHibridos = u("1574943320219-553eb213f72d", 1200); // hand with seeds / wheat
-export const cropHerbicidas = u("1605000797499-95a51c5269ae", 1200); // tractor in field
-export const cropFungicidas = u("1530836369250-ef72a3f5cda8", 1200); // green sprouts / leaves
-export const cropInsecticidas = u("1500382017468-9049fed747ef", 1200); // wheat field — fallback for insecticidas card
-export const cropTerapicos = u("1574943320219-553eb213f72d", 1200); // golden wheat
-export const cropCoadyuvante = u("1464454709131-ffd692591ee5", 1200); // berries / vineyard
+// Productos category cards (6) — fotos institucionales provistas (en public/)
+export const cropHibridos = "/prod_hibridos.png";       // Híbridos DEKALB Maíz
+export const cropHerbicidas = "/prod_herbicidas.png";   // Herbicidas
+export const cropFungicidas = "/prod_fungicidas.png";   // Fungicidas
+export const cropInsecticidas = "/prod_insecticidas.png"; // Insecticidas
+export const cropTerapicos = "/prod_terapicos.png";     // Terápicos de Semilla
+export const cropCoadyuvante = "/prod_coadyuvante.png"; // Coadyuvante
 
 // Novedades — fotos institucionales provistas (en public/)
 export const newsGarantiaCripton = "/new1.png"; // Garantía Cripton Xpro
