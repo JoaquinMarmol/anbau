@@ -93,28 +93,19 @@ function CategoryCard({ cat, active, onClick }: CategoryCardProps) {
       {/* Bottom dark fade for legibility */}
       <div className="absolute inset-0 bg-gradient-to-t from-black/55 via-black/10 to-transparent" />
 
+      {/* Inner white frame */}
+      <div className="absolute inset-3 rounded-2xl border border-white/80 pointer-events-none" />
+
       {/* Sparkle top-right — white brand sparkle */}
-      <div className="absolute top-3 right-3 text-white drop-shadow-md">
-        <SparkleIcon className="size-7" />
+      <div className="absolute top-5 right-5 text-white drop-shadow-md">
+        <SparkleIcon className="size-8" />
       </div>
 
       {/* Label */}
-      <div className="absolute inset-x-0 bottom-0 p-4 md:p-5 flex flex-col gap-2">
+      <div className="absolute inset-x-3 bottom-3 px-3 pb-4 flex flex-col items-center text-center">
         <h3 className="text-white font-bold text-[15px] md:text-[17px] leading-tight tracking-wide uppercase drop-shadow">
           {cat.label}
         </h3>
-        <div className="flex items-center justify-between">
-          <span className="text-[10px] tracking-[0.16em] text-white/85 uppercase">
-            {active ? "Cerrar" : "Ver productos"}
-          </span>
-          <motion.span
-            initial={false}
-            animate={{ rotate: active ? 180 : 0 }}
-            className="size-7 rounded-full bg-white/20 backdrop-blur-sm border border-white/40 flex items-center justify-center text-white"
-          >
-            <ChevronDown className="size-4" />
-          </motion.span>
-        </div>
       </div>
     </motion.button>
   );
